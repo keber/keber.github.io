@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
             <p className="mb-4 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-cyan-200 backdrop-blur">
-              Desarrollo · QA Automation · DevOps
+              Desarrollo · QA Automation · DevOps · Cloud
             </p>
             <h1 className="text-4xl font-bold leading-tight md:text-6xl">
               Hola, soy <span className="text-cyan-300">Keber Flores</span>
@@ -47,7 +47,7 @@ export default function Hero() {
                 Objetivo actual
               </p>
               <h2 className="mt-3 text-2xl font-semibold text-white">
-                Crecer como Software Developer Junior
+                Crecer como Software Developer 
               </h2>
               <p className="mt-3 leading-7 text-slate-300">
                 Busco integrarme en equipos donde pueda aportar solidez técnica,

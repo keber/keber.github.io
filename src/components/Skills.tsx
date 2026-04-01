@@ -1,12 +1,39 @@
-const skills = [
-  "Java + Spring Boot",
-  "QA Automation",
-  "DevOps",
-  "Python",
-  "SQL",
-  "Azure DevOps",
-  "Playwright / Selenium",
-  "APIs REST",
+const skillGroups = [
+  {
+    label: "Desarrollo",
+    items: ["Java + Spring Boot", "Python", "SQL", "APIs REST"],
+  },
+  {
+    label: "QA & DevOps",
+    items: ["QA Automation", "Playwright / Selenium", "DevOps", "Azure DevOps"],
+  },
+  {
+    label: "Cloud",
+    items: ["AWS", "Azure"],
+  },
+  {
+    label: "Herramientas",
+    items: ["VS Code", "IntelliJ IDEA", "Docker", "Git"],
+  },
+  {
+    label: "IA & Productividad",
+    items: ["GitHub Copilot", "ChatGPT", "Claude", "Skills CLI"],
+  },
+];
+
+const certifications = [
+  {
+    name: "AWS Cloud Foundations",
+    badge: "/assets/badge-aws-certified-cloud-practitioner.png",
+  },
+  {
+    name: "Especialista DevOps — Talento Digital para Chile",
+    badge: "/assets/badge-talento-digital-especialista-devops.webp",
+  },
+  {
+    name: "Automatización de Pruebas — Talento Digital para Chile",
+    badge: "/assets/badge-talento-digital-automatizacion-pruebas.webp",
+  },
 ];
 
 const timeline = [
@@ -34,14 +61,23 @@ export default function Skills() {
               integración, pruebas y operación con una visión práctica.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-3">
-              {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-100"
-                >
-                  {skill}
-                </span>
+            <div className="mt-6 space-y-4">
+              {skillGroups.map((group) => (
+                <div key={group.label}>
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-slate-400">
+                    {group.label}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {group.items.map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-100"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -66,6 +102,30 @@ export default function Skills() {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="mt-10 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
+        <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">
+          Certificaciones
+        </p>
+        <h2 className="mt-3 text-2xl font-bold text-white">
+          Formación validada
+        </h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {certifications.map((cert) => (
+            <div
+              key={cert.name}
+              className="flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/70 p-5 text-center"
+            >
+              <img
+                src={cert.badge}
+                alt={cert.name}
+                className="h-24 w-24 object-contain"
+              />
+              <p className="text-sm leading-6 text-slate-200">{cert.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
