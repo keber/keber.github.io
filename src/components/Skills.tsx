@@ -27,6 +27,10 @@ const certifications = [
     badge: "/assets/badge-aws-certified-cloud-practitioner.png",
   },
   {
+    name: "Java Fullstack — Talento Digital para Chile",
+    badge: "/assets/badge-talento-digital-java-fullstack.png",
+  },
+  {
     name: "Especialista DevOps — Talento Digital para Chile",
     badge: "/assets/badge-talento-digital-especialista-devops.webp",
   },
@@ -37,10 +41,10 @@ const certifications = [
 ];
 
 const timeline = [
-  "Experiencia en soporte, infraestructura y operación TI",
+  "Experiencia en QA, Desarrollo, Infraestructura y operación TI",
   "Trabajo en automatización, QA y roles técnicos tipo DevOps",
   "Formación y práctica en desarrollo Fullstack Java con Spring Boot",
-  "Objetivo actual: consolidarme como Software Developer Junior",
+  "Objetivo actual: consolidarme como Software Developer",
 ];
 
 export default function Skills() {
